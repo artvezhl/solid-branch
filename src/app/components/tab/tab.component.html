@@ -1,0 +1,13 @@
+<li class="nav-item" role="tab">
+  <a
+    class="nav-link px-4 w-100"
+    routerLink="/navigator"
+    routerLinkActive="active"
+    [queryParams]="{tab: operation.id}"
+    id="{{operation.type}}-tab"
+    data-toggle="tab"
+    type="button"
+    role="tab"
+    aria-selected="true"
+  >{{ operation.type | titlecase }}</a>
+</li>
