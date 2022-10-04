@@ -1,5 +1,11 @@
 <div class="d-flex flex-column border border-dark rounded p-4 mt-3">
   <h2 class="text-left">{{ operation.count }}</h2>
   <p class="text-left">{{ operation.type | titlecase }}</p>
-  <button class="btn btn-primary ml-auto px-5">See all</button>
+  <button class="btn btn-primary ml-auto px-5">
+    <a
+      routerLink="navigator"
+      [queryParams]="{tab: operation.id}"
+      class="text-white"
+    >See all</a>
+  </button>
 </div>

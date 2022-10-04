@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {IOperationElement} from '../../models/operation';
 
 @Component({
   selector: 'app-operation',
@@ -6,9 +7,6 @@ import {Component, Input} from '@angular/core';
 })
 
 export class OperationComponent {
-  @Input() operation: {
-    type: string,
-    count: number
-  }
+  @Input() operation: IOperationElement
 }
 

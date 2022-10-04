@@ -1,23 +1,4 @@
 <div class="container-fluid">
   <h1 class="text-center">{{ title | titlecase }}</h1>
-  <div class="container p-5">
-    <div class="d-flex flex-column w-100">
-      <div class="bg-gray border border-dark text-center p-4"></div>
-      <div class="border-left border-right border-dark d-flex justify-content-center align-items-center flex-column p-3">
-        <h2>Welcome</h2>
-        <p>With supporting text below as a natural lead-in to additional content.</p>
-        <button class="btn btn-primary">See transactions</button>
-      </div>
-      <div class="bg-gray border border-dark text-center p-2">
-        You have {{ total }} transactions
-      </div>
-    </div>
-    <div class="row row-cols-2 justify-content-center text-center">
-      <app-operation
-        *ngFor="let operation of operationTypes()"
-        class="col-6 p-3"
-        [operation]="operation"
-      ></app-operation>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
