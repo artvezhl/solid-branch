@@ -9,47 +9,15 @@
         <button class="btn btn-primary">See transactions</button>
       </div>
       <div class="bg-gray border border-dark text-center p-2">
-        You have 100 transactions
+        You have {{ total }} transactions
       </div>
     </div>
     <div class="row row-cols-2 justify-content-center text-center">
-      <div class="d-flex flex-column col-6 border border-dark rounded p-4 mt-3">
-        <h2 class="text-left">123</h2>
-        <p class="text-left">Income</p>
-        <button class="btn btn-primary ml-auto px-5">See all</button>
-      </div>
-      <div class="d-flex flex-column col-6 border border-dark rounded p-4 mt-3">
-        <h2 class="text-left">123</h2>
-        <p class="text-left">Income</p>
-        <button class="btn btn-primary ml-auto px-5">See all</button>
-      </div>
-      <div class="d-flex flex-column col-6 border border-dark rounded p-4 mt-3">
-        <h2 class="text-left">123</h2>
-        <p class="text-left">Income</p>
-        <button class="btn btn-primary ml-auto px-5">See all</button>
-      </div>
-      <div class="d-flex flex-column col-6 border border-dark rounded p-4 mt-3">
-        <h2 class="text-left">123</h2>
-        <p class="text-left">Income</p>
-        <button class="btn btn-primary ml-auto px-5">See all</button>
-      </div>
+      <app-operation
+        *ngFor="let operation of operationTypes()"
+        class="col-6 p-3"
+        [operation]="operation"
+      ></app-operation>
     </div>
-<!--    <div class="container">-->
-<!--      <div class="row mt-4">-->
-<!--        <div class="col bg-info border border-dark text-center p-2">col</div>-->
-<!--        <div class="w-10 p-2"></div>-->
-<!--        <div class="col bg-info border border-dark text-center p-2">col</div>-->
-<!--        <div class="w-100 p-2"></div>-->
-<!--        <div class="col bg-info border border-dark text-center p-2">col</div>-->
-<!--        <div class="w-10 p-2"></div>-->
-<!--        <div class="col bg-info border border-dark text-center p-2">col</div>-->
-<!--      </div>-->
-<!--    <div class="d-flex flex-wrap space-between w-100">-->
-<!--      <div class="w-50 classWithPad bg-info border border-dark text-center">col</div>-->
-<!--      <div class="w-50 bg-info border border-dark text-center">col</div>-->
-<!--      <div class="w-50 bg-info border border-dark text-center">col</div>-->
-<!--      <div class="w-50 bg-info border border-dark text-center">col</div>-->
-<!--    </div>-->
-<!--    </div>-->
   </div>
 </div>
